@@ -1,3 +1,6 @@
+-- Start hive with different log level
+hive --hiveconf hive.root.logger=WARN,console
+
 -- Insert output to local text file
 INSERT OVERWRITE LOCAL DIRECTORY '/tmp/result1/'
 ROW FORMAT DELIMITED
