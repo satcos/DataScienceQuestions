@@ -1,0 +1,8 @@
+-- Insert output to local text file
+INSERT OVERWRITE LOCAL DIRECTORY '/tmp/result/'
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY '\u0001'
+STORED AS TEXTFILE
+SELECT date, COUNT(*), SUM(volume)
+FROM sales_data
+GROUP BY date;
