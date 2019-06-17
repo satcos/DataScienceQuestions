@@ -59,3 +59,6 @@ Note that Git strips some characters (for example trailing periods) from user.na
 
     git merge <branchname>
 
+*To remove a local pointer to remote branch(Don't use dry run to perform the action):*
+
+    git remote prune origin --dry-run
